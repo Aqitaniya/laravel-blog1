@@ -1,5 +1,5 @@
 <?php
-
+use App\Task;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,8 +31,9 @@ Route::get('/', function () {
 });
 
 Route::get('/tasks', function (){
-//    $tasks = Task::all();
-    $tasks = DB::table('tasks')->latest()->get();
+    $tasks = Task::all();
+    //$tasks = App\Task::all();
+//    $tasks = DB::table('tasks')->latest()->get();
     return view('tasks.index', compact('tasks'));
 });
 
@@ -40,13 +41,15 @@ Route::get('/tasks/{task}', function ($id){
     $name = 'Dev';
     $tasks = DB::table('tasks')->find($id);
     dd($tasks);
-
+//    Task::incomplate()->get();
     return view('welcome', compact('name','tasks'));
 });
 
 Route::get('/tasks1/{task}', function ($id){
     $name = 'Dev';
-    $task = DB::table('tasks')->find($id);
+    $task = Task::find($id); //For this form need create model
+    //$task = App\Task::find($id); //For this form need create model
+    //$task = DB::table('tasks')->find($id);
 
     return view('tasks.show', compact('name','task'));
 });
