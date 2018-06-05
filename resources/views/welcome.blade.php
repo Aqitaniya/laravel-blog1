@@ -83,9 +83,10 @@
                     <h3>Hello, <?= $name; ?></h3>
                     <ul>
                         @foreach ( $tasks as $task )
-                           <li> {{ $task }} </li>
+                            <li> <a href="tasks1/{{ $task->id }}">{{ $task->body }}</a> </li>
                         @endforeach
                     </ul>
+
                 </div>
 
                 <div class="links">

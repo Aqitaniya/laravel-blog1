@@ -23,11 +23,30 @@
 //});
 Route::get('/', function () {
     $name = 'Dev';
-    $age = 31;
-    $tasks = [
-        '11111111',
-        '22222222',
-        '33333333'
-    ];
-    return view('welcome', compact('name', 'age', 'tasks'));
+//    $tasks = DB::table('tasks')->get();
+    $tasks = DB::table('tasks')->latest()->get();
+//    $tasks = DB::table('tasks')->where('created_at', '>='get();
+
+    return view('welcome', compact('name','tasks'));
+});
+
+Route::get('/tasks', function (){
+//    $tasks = Task::all();
+    $tasks = DB::table('tasks')->latest()->get();
+    return view('tasks.index', compact('tasks'));
+});
+
+Route::get('/tasks/{task}', function ($id){
+    $name = 'Dev';
+    $tasks = DB::table('tasks')->find($id);
+    dd($tasks);
+
+    return view('welcome', compact('name','tasks'));
+});
+
+Route::get('/tasks1/{task}', function ($id){
+    $name = 'Dev';
+    $task = DB::table('tasks')->find($id);
+
+    return view('tasks.show', compact('name','task'));
 });
