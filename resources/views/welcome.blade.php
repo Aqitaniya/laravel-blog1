@@ -82,9 +82,9 @@
                     Laravel
                     <h3>Hello, <?= $name; ?></h3>
                     <ul>
-                        @foreach ( $tasks as $task ):
+                        @foreach ( $tasks as $task )
                            <li> {{ $task }} </li>
-                        @endforeach;
+                        @endforeach
                     </ul>
                 </div>
 
