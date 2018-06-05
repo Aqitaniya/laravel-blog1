@@ -11,6 +11,23 @@
 |
 */
 
+//Route::get('/', function () {
+//    return view('welcome', ['name' => 'Dev']);
+//});
+//Route::get('/', function () {
+//    return view('welcome')->with('name', 'World');
+//});
+//Route::get('/', function () {
+//    $name = 'Dev';
+//    return view('welcome', [ 'name' => $name]);
+//});
 Route::get('/', function () {
-    return view('welcome');
+    $name = 'Dev';
+    $age = 31;
+    $tasks = [
+        '11111111',
+        '22222222',
+        '33333333'
+    ];
+    return view('welcome', compact('name', 'age', 'tasks'));
 });

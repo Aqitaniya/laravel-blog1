@@ -80,6 +80,12 @@
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
+                    <h3>Hello, <?= $name; ?></h3>
+                    <ul>
+                        <?php foreach ($tasks as $task): ?>
+                            <li><?= $task; ?></li>
+                        <?php endforeach; ?>
+                    </ul>
                 </div>
 
                 <div class="links">
