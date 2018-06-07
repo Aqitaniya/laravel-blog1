@@ -15,4 +15,8 @@ class TasksController extends Controller
         $task = Task::find($id);
         return view('tasks.show', compact('task'));
     }
+    //automatically find in the table
+    public function show2(Task $task){
+        return view('tasks.show', compact('task'));
+    }
 }
