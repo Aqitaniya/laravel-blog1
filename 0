@@ -16,3 +16,13 @@
 [05-Jun-2018 08:40:47 UTC] PHP Fatal error:  require(): Failed opening required 'C:\Users\BlueSky\Desktop\Laravel\blog1/vendor/autoload.php' (include_path='.;C:\php\pear') in C:\Users\BlueSky\Desktop\Laravel\blog1\artisan on line 18
 [05-Jun-2018 09:27:09 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\Users\BlueSky\AppData\Roaming\Composer\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php on line 67
 [05-Jun-2018 09:27:43 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\Users\BlueSky\AppData\Roaming\Composer\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php on line 67
+<<<<<<< HEAD
+=======
+[06-Jun-2018 12:25:08 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php\ext\mbstring' - The specified module could not be found.
+ in Unknown on line 0
+[06-Jun-2018 12:25:08 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php\ext\openssl' - The specified module could not be found.
+ in Unknown on line 0
+[06-Jun-2018 12:25:08 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'c:\php\ext\sqlite3' - The specified module could not be found.
+ in Unknown on line 0
+[06-Jun-2018 12:25:08 UTC] PHP Parse error:  syntax error, unexpected '?', expecting variable (T_VARIABLE) in C:\Users\BlueSky\Desktop\Laravel\blog1\vendor\symfony\console\Output\Output.php on line 40
+>>>>>>> 741290f0f5fdb243ffa7b45414ae7c9058e48349
