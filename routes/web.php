@@ -59,3 +59,12 @@ Route::get('/', function () {
 Route::get('/tasks', 'TasksController@index');
 Route::get('/tasks/{task}', 'TasksController@show');
 Route::get('/tasks2/{task}', 'TasksController@show2');
+
+
+//php artisan make:controller PostsController
+//php artisan make:model Post
+//php artisan make:migration create_posts_table --create=posts
+//php artisan help make:model
+//php artisan make:model Post -mc
+//php artisan migrate
+Route::get('/posts', 'PostsController@index');
