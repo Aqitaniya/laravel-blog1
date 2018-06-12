@@ -71,5 +71,15 @@ Route::get('/tasks2/{task}', 'TasksController@show2');
 //Route::get('/posts', 'PostsController@index');
 
 Route::get('posts', 'PostController@index');
-Route::get('posts/{post}', 'PostController@show');
-
+Route::get('posts/create', 'PostController@create');
+Route::post('/posts', 'PostController@store');
+//Route::get('posts/{post}', 'PostController@show');
+//posts
+//GET /posts
+//GET /posts/create
+//POST /posts
+//GET /posts/{id}/edit
+//GET /posts/{id}
+//PATCH /posts/{id}
+//DELETE /posts/{id}
+//php artisan make: controller TasksController -r
