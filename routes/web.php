@@ -84,3 +84,5 @@ Route::get('/post/{post}', 'PostController@show');
 //PATCH /posts/{id}
 //DELETE /posts/{id}
 //php artisan make: controller TasksController -r
+
+Route::post('/post/{post}/comments', 'CommentsController@store');
